@@ -87,7 +87,7 @@ For serving the model we need to copy the model S3 path from MLFlow UI, and use 
 # Testing Model on Production
 We could simply use curl to test our model on production, the following bash line is going to send two samples to our model for prediction:
 
-    curl -X POST -H "Content-Type:application/json; format=pandas-split"  --data '{"columns":["text"],"data":[["مسابقه فوتبال لغو شد."],["المپیاد نجوم فردا برگزار می‌شود."]]}'  http://127.0.0.1:5000/invocations
+    curl -X POST -H "Content-Type:application/json; format=pandas-split"  --data '{"columns":["text"],"data":[["مسابقه فوتبال لغو شد."],["المپیاد نجوم فردا برگزار می‌شود."]]}'  http://127.0.0.1:5123/invocations
 
 Which will result in the following, Fortunately predicting the right labels in these two example.
 
